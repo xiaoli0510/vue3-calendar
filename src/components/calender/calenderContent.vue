@@ -31,7 +31,6 @@ const createMonthData = () => {
     const currentYear = date.getFullYear();
     //获取当前月份的天数
     let currentMonthDays = new Date(currentYear, currentMonth, 0).getDate();
-    console.log(currentMonthDays)
     //当天是几号
     let currentDate = date.getDate();
     //当天是周几
@@ -73,8 +72,9 @@ onMounted(()=>{
 <style scoped lang='scss'>    
 .week-top {
     justify-content: space-around;
-    width: 50%;
     width: 210px;
+    font-size: .4rem;
+    text-align: center;
     .week-item {
     width: 30px;
 }
@@ -86,12 +86,14 @@ onMounted(()=>{
     flex-wrap: wrap;
     .day-item {
     text-align: center;
-    line-height: 30px;
+    margin-bottom: 4px;
+    width: 30px;
   
     .solar-item{
-        width: 30px;
-    height: 30px;
-    font-size:.24rem;
+        width: 20px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 0.24rem;
     &.current{
         background:rgb(34, 19, 238);
         border-radius: 50%;
