@@ -1,11 +1,17 @@
 <script setup lang='ts'>
-    import {ref} from 'vue';
-    let curMonth = ref(1);
-    let curYear = ref(2024);
+const props = defineProps(['currentYearMonth'])
 </script>
 <template>
-    <div>{{curMonth}}月</div>
-    <div class="year">{{curYear}}年</div>
+    <div class="month">{{ currentYearMonth.month+1 }}月</div>
+    <div class="year">{{ currentYearMonth.year }}年</div>
 </template>
 <style scoped lang='scss'>
+month {
+    font-size: 40px;
+}
+
+.year {
+    font-size: 20px;
+    color: #ccc;
+}
 </style>
